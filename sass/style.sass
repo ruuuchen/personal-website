@@ -1,0 +1,131 @@
+// 顏色定義
+$color_orange: #f85a40
+$color_grey: #caccd1
+$color_darkgrey: #52565e
+$color_white: #f3f4f7
+$color_green: #30c39e
+
+*
+	// border: solid 1px black
+	position: relative
+	font-family: 'Barlow', sans-serif, "微軟正黑體"
+
+// 基礎標題、文字設定
+*
+	color: $color_darkgrey
+
+.title
+	padding-top: 0px
+	padding-bottom: 100px
+
+p.h1
+	font-size: 120px
+	font-style: italic
+	color: $color_orange
+p.h2
+	font-size: 72px
+	color: $color_grey
+p.h3
+	font-size: 54px
+	color: $color_grey
+p.h4
+	margin-bottom: 30px
+	color: $color_orange
+
+
+// 頁面設定
+section
+	padding: 50px 0px
+	background-color: $color_white
+	background-image: linear-gradient(rgba($color_orange, 0.2) 1px, transparent 0), linear-gradient(90deg, rgba($color_orange, 0.2) 1px, transparent 0)
+	background-size: 30px 30px
+
+// 導覽列
+.at_top
+	background-color: $color_white
+	border-bottom: solid 5px $color_orange
+
+a.navbar-brand
+	color: $color_orange
+	&:hover
+		color: $color_orange
+a.nav-link
+	color: $color_orange
+	&:hover
+		color: $color_green
+
+// 封面
+section#cover
+	padding-top: 120px
+
+.bigdot
+	width: 250px
+	height: 250px
+	border-radius: 250px
+	background-color: $color_orange
+	position: absolute
+	top: 53%
+	left: 65%
+
+.arrow
+	width: 250px
+	height: 250px
+	position: absolute
+	top: 50%
+	left: 50%
+	transform: translateX(-50%) translateY(-50%)
+
+.left,.center,.right
+	width: 10px
+	height: 180px
+	position: absolute
+	top: 0%
+	left: 50%
+	transform: translateX(-50%)
+	background-color: white
+.left
+	transform: translateX(-270%) translateY(40%) rotate(-45deg) scaleY(0.4)
+.right
+	transform: translateX(170%) translateY(40%) rotate(45deg) scaleY(0.4)
+
+// 作品
+.block
+	margin: 15px 0px
+	height: 300px
+	background-color: rgba($color_orange, 0.5)
+
+button
+	background-color: $color_orange
+	box-shadow: none
+	&:hover
+		background-color: $color_green
+
+i,span
+	padding: 0px 3px
+	color: white
+
+
+// 關於
+.pic
+	height: 500px
+	background-color: rgba($color_orange, 0.5)
+	margin: 0px -15px
+
+.textblock
+	padding: 30px 0px
+
+li.text
+	list-style: none
+	margin-bottom: 15px
+.name
+	font-size: 20px
+
+// 聯絡
+#contact
+	& p.h4
+		color: $color_grey
+
+// 頁尾
+footer
+	background-color: white
+	text-align: right
