@@ -9,29 +9,85 @@ $color_green: #30c39e
 	// border: solid 1px black
 	position: relative
 	font-family: 'Barlow', sans-serif, "微軟正黑體"
+    box-sizing: border-box
 
 // 基礎標題、文字設定
-*
+p
 	color: $color_darkgrey
 
 .title
-	padding-top: 0px
-	padding-bottom: 100px
+	padding-top: 5px
+	padding-bottom: 20px
+	& p.h1
+		font-size: 120px
+		font-style: italic
+		color: $color_orange
+		text-shadow: -5px 5px 0px rgba(black,0.15)
+	& p.h2
+		font-size: 54px
+		color: $color_green
+		text-align: right
+		font-style: italic
 
-p.h1
-	font-size: 120px
-	font-style: italic
-	color: $color_orange
-p.h2
-	font-size: 72px
-	color: $color_grey
+#works
+	& .title
+		padding-bottom: 560px
+#about
+	& .title
+		padding-bottom: 560px
+
+.subtitle
+	margin-bottom: -60px
+	text-align: right
+	z-index: 999
+	& p.h1
+		font-size: 160px
+		font-style: italic
+		color: lighten($color_green,30%)
+		text-shadow: -5px 5px 0px $color_green
+
 p.h3
-	font-size: 54px
+	display: inline-block
+	padding: 5px 15px
+	border: solid 1px $color_grey
+	background-color: white
 	color: $color_grey
-p.h4
-	margin-bottom: 30px
-	color: $color_orange
+	box-shadow: -3px 3px 0px $color_grey
+#about
+	& p.h3
+		margin-bottom: 30px
 
+p.h4
+	color: $color_green
+	line-height: 35px
+
+#about
+	& .brief p.h4
+		margin: 0px 30px 25px 30px
+		font-weight: 400
+#contact
+	& p.h4
+		text-align: right
+		margin: 60px 0px 60px 0px
+		color: $color_grey
+
+// 共通元件
+.button
+	display: inline-block
+	padding: 0px 8px
+	margin: 5px 0px
+	background-color: white
+	border: solid 1px $color_grey
+	color: $color_grey
+	box-shadow: -3px 3px 0px $color_grey
+	& a
+		text-decoration: none
+		color: $color_grey
+		transition-duration: 0.5s
+		&:hover
+			text-decoration: none
+			padding-left: 5px
+			color: $color_darkgrey
 
 // 頁面設定
 section
@@ -40,10 +96,18 @@ section
 	background-image: linear-gradient(rgba($color_orange, 0.2) 1px, transparent 0), linear-gradient(90deg, rgba($color_orange, 0.2) 1px, transparent 0)
 	background-size: 30px 30px
 
+.container#box
+	background-color: $color_white
+	border: solid 1px $color_grey
+	box-shadow: -5px 5px 0px rgba(black,0.15)
+	max-width: 1000px
+
 // 導覽列
 .at_top
 	background-color: $color_white
 	border-bottom: solid 5px $color_orange
+	// font-weight: 500
+	// box-shadow: -5px 5px 0px rgba(black,0.15)
 
 a.navbar-brand
 	color: $color_orange
@@ -53,79 +117,187 @@ a.nav-link
 	color: $color_orange
 	&:hover
 		color: $color_green
+		text-decoration: line-through
+
+span.icon-bar
+	color: $color_orange
+	font-size: 30px
 
 // 封面
 section#cover
 	padding-top: 120px
 
-.bigdot
+#bigdot
+	position: absolute
+	top: 53%
+	// left: 50%
+	// transform: translateX(50%)
+	cursor: pointer
+	z-index: 999
+
+.anim750
+	transition: all 750ms ease-in-out
+
+.circle
 	width: 250px
 	height: 250px
 	border-radius: 250px
 	background-color: $color_orange
-	position: absolute
-	top: 53%
-	left: 65%
+	margin: 20px
+.reveal.circle
+	background-color: $color_green
+	box-shadow: 0 5px 0px rgba(black,0.15)
+	overflow: hidden
 
 .arrow
 	width: 250px
 	height: 250px
 	position: absolute
-	top: 50%
+	top: 0%
 	left: 50%
 	transform: translateX(-50%) translateY(-50%)
+	opacity: 0
+	transition: 0.8s ease-in-out 0.2s
+#bigdot:hover .arrow
+	opacity: 1
+	top: 50%
 
 .left,.center,.right
-	width: 10px
-	height: 180px
+	width: 5px
+	height: 125px
 	position: absolute
 	top: 0%
 	left: 50%
 	transform: translateX(-50%)
-	background-color: white
+	background-color: lighten($color_green,20%)
 .left
-	transform: translateX(-270%) translateY(40%) rotate(-45deg) scaleY(0.4)
+	transform: translateX(-300%) translateY(40%) rotate(-45deg) scaleY(0.3)
 .right
-	transform: translateX(170%) translateY(40%) rotate(45deg) scaleY(0.4)
+	transform: translateX(200%) translateY(40%) rotate(45deg) scaleY(0.3)
+
+.wrapper
+	width: 290px
+	height: 290px
+	position: absolute
+	top: 0px
+	left: 0px
+	overflow: hidden
+
+.sticky
+	width: 290px
+	height: 290px
+	position: absolute
+	top: 0px
+	left: 0px
+	transform: rotate(45deg)
+#bigdot:hover .sticky
+	transform: rotate(10deg)
+
+.front
+	position: absolute
+	height: 250px
+	top: auto
+	bottom: 0px
+	// box-shadow: 0px -140px 20px -140px rgba(black,0.8)
+	& .circle
+		margin-top: -20px
+		background-image: linear-gradient(bottom, $color_orange 78%, rgba(black,0.1) 98%)
+#bigdot:hover .front
+	height: 120px
+	// box-shadow: 0 -60px 10px -60px rgba(black,0.1)
+#bigdot:hover .front .circle
+	margin-top: -150px
+
+.back
+	position: absolute
+	height: 20px
+	top: 40px
+	& .circle
+		margin-top: -230px
+		background-image: linear-gradient(bottom, $color_orange, rgba(white,0.5))
+#bigdot:hover .back
+	height: 150px
+	top: 165px
+#bigdot:hover .back .circle
+	margin-top: -100px
 
 // 作品
-.block
-	margin: 15px 0px
-	height: 300px
-	background-color: rgba($color_orange, 0.5)
+.container#box.nextbox
+	margin-top: 40px
 
-button
-	background-color: $color_orange
-	box-shadow: none
-	&:hover
-		background-color: $color_green
+.playgroundpic
+	background-image: url('../img/play.jpg')
+	background-size: cover
+	background-position: top
+	margin: 0px -15px
+	margin-bottom: -115px
 
-i,span
-	padding: 0px 3px
-	color: white
+.work
+	height: 600px
+	background-size: 100%
+	background-repeat: no-repeat
+	background-position: top center
+	margin-right: -30px
 
+.work_name.textblock
+	padding: 60px 0px 0px 60px
+	margin-bottom: -100px
+	z-index: 999
+	// height: 400px
+
+// .work_notes
+// 	margin-top: 50px
+// 	margin-left: 35px
 
 // 關於
-.pic
-	height: 500px
-	background-color: rgba($color_orange, 0.5)
-	margin: 0px -15px
+.container#box.textblock
+	padding: 80px 60px
 
-.textblock
-	padding: 30px 0px
-
-li.text
+	& hr
+		margin: 10px 0px 50px 0px
+ul
+	padding-left: 30px
+	color: $color_green
+li
 	list-style: none
-	margin-bottom: 15px
-.name
-	font-size: 20px
+	color: $color_darkgrey
+
+.selfpic
+	background-image: url('../img/selfpic.jpg')
+	background-size: cover
+	background-position: top
+	margin: 0px -15px
+	margin-bottom: -115px
 
 // 聯絡
-#contact
-	& p.h4
-		color: $color_grey
+#contact a
+	text-decoration: none
+	color: $color_green
+	z-index: 999
+	transition-duration: 0.8s
+	&::after
+		content: ''
+		position: absolute
+		top: 95%
+		left: 0
+		width: 100%
+		height: 3px
+		background: lighten($color_green,30%)
+		z-index: -1
+	&:hover
+		&::after
+			top: 50%
+			height: 12px
+			background: lighten($color_green,40%)
+
+#contact p
+	text-align: right
 
 // 頁尾
 footer
-	background-color: white
-	text-align: right
+	background-color: $color_grey
+	& p
+		font-size: 14px
+		text-align: right
+		margin-bottom: 0px
+		padding: 3px 0px

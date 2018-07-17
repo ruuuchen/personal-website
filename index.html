@@ -6,13 +6,12 @@
   <link rel="stylesheet" href="css/style.css"/>
   <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.css"/>
   <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Barlow:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"/>
-  <link rel="stylesheet prefetch" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css"/>
 </head>
 <body></body>
 <nav class="navbar navbar-expand-md fixed-top at_top">
   <div class="container">
     <div class="navbar-header"><a class="navbar-brand" href="cover">&#10061 RU</a></div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation"><span class="icon-bar">&#8801</span></button>
     <div class="navbar-collapse collapse" id="navbarToggleExternalContent">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="nav-item"><a class="nav-link" href="#works">WORKS</a></li>
@@ -23,21 +22,37 @@
   </div>
 </nav>
 <section id="cover">
-  <div class="bigdot">
-    <div class="arrow">
-      <div class="left"></div>
-      <div class="center"></div>
-      <div class="right"></div>
-    </div>
-  </div>
   <div class="container">
     <div class="row">
-      <div class="col-sm-12">
+      <div class="col-sm-12 col-md-12 col-lg-8">
         <div class="title">
           <p class="h1">LET'S</p>
           <p class="h1">BUILD</p>
           <p class="h1">SOMETHING</p>
           <p class="h1">TOGETHER</p>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-4">
+        <div class="anim750" id="bigdot">
+          <div class="wrapper">
+            <div class="reveal circle">
+              <div class="arrow">
+                <div class="left"></div>
+                <div class="center"></div>
+                <div class="right"></div>
+              </div>
+            </div>
+          </div>
+          <div class="sticky anim750">
+            <div class="front wrapper anim750">
+              <div class="circle anim750"></div>
+            </div>
+          </div>
+          <div class="sticky anim750">
+            <div class="back wrapper anim750">
+              <div class="circle anim750"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -46,42 +61,39 @@
 <section id="works">
   <div class="container">
     <div class="row">
-      <div class="col-sm-5 offset-sm-7">
+      <div class="col-sm-12">
         <div class="subtitle">
           <p class="h1">WORKS</p>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="title">
-          <p class="h2">GO VISIT</p>
-          <p class="h3">THE DESIGN PLAYGROUND</p>
+  </div>
+  <div class="container-fluid">
+    <div class="playgroundpic">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="title">
+              <p class="h2">THE DESIGN PLAYGROUND</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="block"></div>
-      </div>
-      <div class="col-sm-6">
-        <div class="block"></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="block"></div>
-      </div>
-      <div class="col-sm-6">
-        <div class="block"></div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="block"></div>
-      </div>
-      <div class="col-sm-6">
-        <div class="block"></div>
+    <div class="container nextbox" id="box" v-for="work in works">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12 col-sm-12 col-lg-12">
+            <div class="work_name textblock">
+              <p class="h3">{{work.name}}</p>
+              <div class="work_notes">
+                <div class="button"><a href="{{work.github}}" target="_blank">>>> Open sourced on GitHub</a></div><br/>
+                <div class="button"><a href="{{work.website}}" target="_blank">>>> Launch site</a></div>
+              </div>
+            </div>
+            <div class="work" v-bind:style="'background-image: url('+work.img+')'"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -89,73 +101,77 @@
 <section id="about">
   <div class="container">
     <div class="row">
-      <div class="col-sm-5 offset-sm-7">
+      <div class="col-sm-12">
         <div class="subtitle">
           <p class="h1">ABOUT</p>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="title">
-          <p class="h2">INTRODUCE</p>
-          <p class="h3">THE POSITIVE BUILDER</p>
-        </div>
-      </div>
-    </div>
   </div>
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="pic"></div>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="textblock">
-          <p class="h4">Wun-Ru Chen, born in Tainan in 1994, currently based in Taipei. <br> Graduted at National Taiwan University of Science and Technology, Department of Architecture.</p>
-          <button><i class="far fa-file-alt"></i><span>RESUME</span></button>
+    <div class="selfpic">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="title">
+              <p class="h2">THE POSITIVE BUILDER</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="textblock">
-          <p class="h4">SKILLS</p>
-          <ul>
-            <li class="text">
-              <div class="name">- Front End Web Design: HTML、CSS、SVG</div>
-            </li>
-            <li class="text">
-              <div class="name">- Front-end Framework: Vue.js</div>
-            </li>
-            <li class="text">
-              <div class="name">- Front End Web Development</div>
-            </li>
-          </ul>
+    <div class="container textblock" id="box">
+      <div class="row">
+        <div class="col-sm-12">
+          <p class="h3">Hey There, I Am Wun-Ru.</p>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="textblock">
-          <p class="h4">EXPERIENCE</p>
-          <ul>
-            <li class="text">
-              <div class="date">- Oct. 2016 - Jan. 1018</div>
-              <div class="name">Design Assistant at Netizen Productions INC.</div>
-            </li>
-            <li class="text">
-              <div class="data">- Feb. 2016 - Oct. 2016</div>
-              <div class="name">Project Assistant at Cxcity Society</div>
-            </li>
-            <li class="text">
-              <div class="date">- Jul. 2015 - Sep. 2015</div>
-              <div class="name">Intern Product Editor at Foundation of Historic City Conservation and Regeneration</div>
-            </li>
-          </ul>
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="brief">
+            <p class="h4">A junior front-end web designer currently based in Taipei.</p>
+            <p class="h4">I believes that design is not only about how things look and feel. It’s about the meaning they produce.</p>
+            <p class="h4">I particularly enjoy using my expertise to offer creative solutions to help companies and teams make the most out of the digital products, and enjoy coming up with interesting ways of solving problems.</p>
+          </div>
+        </div>
+      </div>
+      <hr/>
+      <div class="row">
+        <div class="col-sm-12">
+          <p class="h3">Tools to Build Interactive Websites</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-6">
+          <p class="h4">&#10140 Front-End Programming
+            <ul>HTML5 / CSS3
+              <li v-for="item in html_css">&#9745 {{item}}</li>
+            </ul>
+            <ul>JavaScript
+              <li v-for="item in javascript">&#9745 {{item}}</li>
+            </ul>
+            <ul>API Service
+              <li v-for="item in api">&#9745 {{item}}</li>
+            </ul>
+          </p>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-6">
+          <p class="h4">&#10140 Version Control / Developmemt Tools
+            <ul>
+              <li v-for="item in version_control">&#9745 {{item}}</li>
+            </ul>
+          </p>
+          <p class="h4">&#10140 Design Software
+            <ul>
+              <li v-for="item in software">&#9745 {{item}}</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+      <hr/>
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-6">
+          <div class="button"><a href="">>>> RESUME</a></div>
         </div>
       </div>
     </div>
@@ -164,7 +180,7 @@
 <section id="contact">
   <div class="container">
     <div class="row">
-      <div class="col-sm-5 offset-sm-7">
+      <div class="col-sm-12">
         <div class="subtitle">
           <p class="h1">CONTACT</p>
         </div>
@@ -172,14 +188,13 @@
     </div>
     <div class="row">
       <div class="col-sm-12">
-        <div class="title">
-          <p class="h2">NICE TO MEET YOU</p>
-          <p class="h4">PLEASE E-MAIL ME AT wrchen0516@gmail.com</p>
-        </div>
+        <p class="h4">Find me on <a href="https://github.com/ruuuchen" target="_blank"> GitHub </a>, <a href="www.linkedin.com/in/ruuuchen" target="_blank"> LinkedIn </a>,<br> or contact me with <a href="mailto:wrchen0516@gmail.com"> Email : wrchen0516@gmail.com </a></p>
+        <p>Ⓒ 2018 Wun-Ru Chen</p>
       </div>
     </div>
   </div>
 </section>
-<footer>
-  <div class="container">Ⓒ 2018 Wun-Ru Chen Design</div>
-</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="js/index.js"></script>
