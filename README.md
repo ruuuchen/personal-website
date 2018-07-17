@@ -1,1 +1,1 @@
-You can visit the website [ruuuchen.ml](ruuuchen.ml).
+You can visit the website [https://ruuuchen.github.io/personal-website/](https://ruuuchen.github.io/personal-website/).
