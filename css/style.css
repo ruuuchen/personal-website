@@ -246,7 +246,7 @@ section#cover {
 
 .playgroundpic {
   background-image: url("../img/play.jpg");
-  background-size: cover;
+  background-size: 100%;
   background-position: top;
   margin: 0px -15px;
   margin-bottom: -115px; }
@@ -314,3 +314,45 @@ footer {
     text-align: right;
     margin-bottom: 0px;
     padding: 3px 0px; }
+
+@media screen and (max-width: 992px) {
+  .container#box {
+    max-width: 750px; }
+  #bigdot {
+    display: none; }
+  .work {
+    height: 460px; }
+  .work_name.textblock {
+    margin-bottom: 0px; } }
+
+@media screen and (max-width: 768px) {
+  .title p.h1 {
+    font-size: 80px; }
+  .title p.h2 {
+    font-size: 32px; }
+  .subtitle {
+    margin-bottom: -40px; }
+    .subtitle p.h1 {
+      font-size: 90px; }
+  p.h3 {
+    font-size: 22px; }
+  p.h4 {
+    font-size: 18px;
+    line-height: 26px; }
+  #about .brief p.h4 {
+    margin: 0px 0px 25px 0px; }
+  .container#box {
+    max-width: 550px; }
+  #bigdot {
+    display: none; }
+  .work {
+    height: 340px; }
+  .work_name.textblock {
+    padding: 60px 0px 0px 10px;
+    margin-bottom: 0px; }
+  .container#box.textblock {
+    padding: 60px 40px; } }
+
+@media screen and (max-width: 520px) {
+  .work {
+    height: 280px; } }
