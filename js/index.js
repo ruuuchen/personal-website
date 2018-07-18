@@ -27,4 +27,7 @@ var vm02=new Vue({
 	data: skilldatas
 });
 
+// skrollr初始值
+var s = skrollr.init();
+
 // $('.collapse').collapse();

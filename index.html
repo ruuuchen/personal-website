@@ -33,7 +33,7 @@
         </div>
       </div>
       <div class="col-sm-12 col-md-12 col-lg-4">
-        <div class="anim750" id="bigdot">
+        <div class="anim750" id="bigdot"><a href="#works"></a>
           <div class="wrapper">
             <div class="reveal circle">
               <div class="arrow">
@@ -80,7 +80,7 @@
         </div>
       </div>
     </div>
-    <div class="container nextbox" id="box" v-for="work in works">
+    <div class="container nextbox" id="box" v-for="work in works" data-bottom-top="transform: scale(0.8) translateY(-40px)" data-center="transform: scale(1) translateY(0px)" data-center-bottom="transform: scale(0.8) translateY(0px)">
       <div class="container-fluid">
         <div class="row">
           <div class="col-sm-12 col-sm-12 col-lg-12">
@@ -102,7 +102,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-12">
-        <div class="subtitle">
+        <div class="subtitle" data-bottom-top="transform: translateX(-60px)" data-center="transform: translateX(0px)">
           <p class="h1">ABOUT</p>
         </div>
       </div>
@@ -120,7 +120,7 @@
         </div>
       </div>
     </div>
-    <div class="container textblock" id="box">
+    <div class="container textblock" id="box" data-bottom-top="transform: scale(0.8) translateY(-40px)" data-top="transform: scale(1) translateY(0px)">
       <div class="row">
         <div class="col-sm-12">
           <p class="h3">Hey There, I Am Wun-Ru.</p>
@@ -197,4 +197,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
 <script src="js/index.js"></script>
