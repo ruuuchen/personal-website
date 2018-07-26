@@ -1,3 +1,10 @@
+// skrollr初始值
+$(document).ready(function(){
+  if ($(window).width() > 1000) {
+      var s = skrollr.init();
+  }
+});
+
 var workdatas=[
 	{id:"w1" ,name: "Weather Widget", description: "使用 CSS 與 SVG 製作，並增添互動與滑鼠效果。", img: "img/work01.jpg", github: "https://github.com/ruuuchen/weather-widget.git", website: "https://ruuuchen.github.io/weather-widget/"},
 	{id:"w2" ,name: "When It Comes to Blue", description: "使用 Bootstrap 的網格系統，客製化開發響應式網頁。", img: "img/work02.jpg", github: "https://github.com/ruuuchen/when-it-comes-to-blue-website.git", website: "https://ruuuchen.github.io/when-it-comes-to-blue-website/"},
@@ -26,9 +33,6 @@ var vm02=new Vue({
 	el: "#about",
 	data: skilldatas
 });
-
-// skrollr初始值
-var s = skrollr.init();
 
 // 導覽列滑鼠事件
 $(".nav-item").click(function(){

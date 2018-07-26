@@ -1,8 +1,15 @@
 @charset "UTF-8";
 * {
   position: relative;
-  font-family: "Barlow", sans-serif, "微軟正黑體";
-    font-family-box-sizing: border-box; }
+  font-family: 'Barlow', sans-serif, "微軟正黑體";
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: auto;
+  padding: 0px;
+  margin: 0px; }
 
 p {
   color: #52565e; }
@@ -90,7 +97,7 @@ p.h4 {
 
 section {
   padding: 50px 0px;
-  background-color: #f3f4f7;
+  background-color: rgba(243, 244, 247, 0.6);
   background-image: -webkit-linear-gradient(rgba(248, 90, 64, 0.2) 1px, transparent 0), -webkit-linear-gradient(left, rgba(248, 90, 64, 0.2) 1px, transparent 0);
   background-image: -o-linear-gradient(rgba(248, 90, 64, 0.2) 1px, transparent 0), -o-linear-gradient(left, rgba(248, 90, 64, 0.2) 1px, transparent 0);
   background-image: linear-gradient(rgba(248, 90, 64, 0.2) 1px, transparent 0), linear-gradient(90deg, rgba(248, 90, 64, 0.2) 1px, transparent 0);
@@ -376,6 +383,8 @@ li {
     margin: 0px 0px 25px 0px; }
   .container#box {
     max-width: 550px; }
+    .container#box::after {
+      display: none; }
   #bigdot {
     display: none; }
   .work {
@@ -390,9 +399,19 @@ li {
 @media screen and (max-width: 480px) {
   .title p.h1 {
     font-size: 52px;
-    text-shadow: -3px 3px 0px rgba(0, 0, 0, 0.15); }
+    text-shadow: -3px 3px 0px rgba(202, 204, 209, 0.15);
+    background-image: none;
+    border: solid 1px rgba(248, 90, 64, 0.3);
+    background-color: rgba(255, 255, 255, 0.6);
+    color: #f85a40;
+    -webkit-box-shadow: -3px 3px 0px rgba(248, 90, 64, 0.3);
+    box-shadow: -3px 3px 0px rgba(248, 90, 64, 0.3); }
   .title p.h2 {
     font-size: 24px; }
+  #works .title {
+    padding-bottom: 250px; }
+  #about .title {
+    padding-bottom: 250px; }
   .subtitle {
     margin-bottom: -30px; }
     .subtitle p.h1 {
