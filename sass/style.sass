@@ -73,8 +73,7 @@ p.h4
 	font-weight: 400
 #contact p.h4
 	text-align: right
-	margin: 40px 0px 60px 0px
-	color: $color_grey
+	margin: 50px 0px 60px 0px
 
 // 共通元件
 .button
@@ -99,7 +98,9 @@ section
 	padding: 50px 0px
 	background-color: rgba($color_white,0.6)
 	background-image: linear-gradient(rgba($color_orange, 0.2) 1px, transparent 0), linear-gradient(90deg, rgba($color_orange, 0.2) 1px, transparent 0)
+	background-image: -ms-linear-gradient(rgba($color_orange, 0.2) 1px, transparent 0), -ms-linear-gradient(90deg, rgba($color_orange, 0.2) 1px, transparent 0)
 	background-size: 30px 30px
+
 
 .container#box
 	max-width: 1000px
@@ -150,8 +151,6 @@ section#cover
 #bigdot
 	position: absolute
 	top: 53%
-	// left: 50%
-	// transform: translateX(50%)
 	cursor: pointer
 	z-index: 999
 
@@ -272,9 +271,12 @@ section#cover
 	&::after
 		display: none
 	& hr
-		margin: 10px 0px 50px 0px
+		margin: 10px 0px 30px 0px
 		border: solid 1px white
 		box-shadow: 0px 1px 0px rgba(black,0.15)
+.brief
+	padding-bottom: 30px
+
 ul
 	padding-left: 30px
 	color: $color_green
@@ -293,37 +295,33 @@ li
 	margin-bottom: -115px
 
 // 聯絡
-#contact a
+#contact p.h4 a
 	text-decoration: none
-	color: $color_green
+	color: lighten($color_green,20%)
 	z-index: 999
-	transition-duration: 0.8s
+	transition-duration: 0.5s
 	&::after
 		content: ''
 		position: absolute
-		top: 95%
+		top: 80%
 		left: 0
-		width: 100%
+		width: 95%
 		height: 3px
 		background: lighten($color_green,30%)
 		z-index: -1
 	&:hover
+		color: $color_green
 		&::after
 			top: 50%
 			height: 12px
 			background: lighten($color_green,40%)
-#contact p
-	text-align: right
-	margin-top: 10px
 
-.linehr
+.note
 	position: absolute
 	right: 15px
-	bottom: -10px
-	// border-bottom: solid 5px $color_grey
-	color: lighten($color_darkgrey,23%)
-	font-size: 14px
-	font-weight: 500
+	color: lighten($color_orange,20%)
+	font-size: 12px
+	font-weight: 300
 	text-align: right
 
 // RWD
@@ -356,7 +354,7 @@ li
 		margin: 0px 0px 25px 0px
 
 	.container#box
-		max-width: 550px
+		max-width: 580px
 		&::after
 			display: none
 
@@ -402,6 +400,12 @@ li
 	.container#box
 		&::after
 			display: none
+
 	.work
 		height: 220px
 		background-position: bottom center
+	.work_name.textblock
+		padding: 30px 0px 0px 0px
+		margin-bottom: 0px
+	.container#box.textblock
+		padding: 30px 30px
