@@ -15,10 +15,10 @@ var workdatas=[
 ];
 
 var skilldatas={
-	html_css :["Pug","SASS","Flex","SVG","Bootstrap 4","Responsive Web Design"],
+	html_css :["Pug","Sass","SVG","Bootstrap 4","Responsive Web Design"],
 	javascript: ["jQuery","Vue.js","Ajax"],
 	api: ["Google Map API","Other Open Data APIs"],
-	version_control: ["Sublime text","Terminal ( Mac OS )","Git","Github","SourceTree"],
+	version_control: ["Sublime Text","Terminal ( Mac OS )","Git","Github","SourceTree"],
 	software: ["Photoshop","Illustrator"]
 };
 
